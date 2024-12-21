@@ -8,6 +8,7 @@ import bwui.BWComponent;
 import planning.*;
 import java.util.*;
 import modelling.*;
+import blocksworld.Constants;
 
 
 /*
@@ -16,8 +17,8 @@ import modelling.*;
 public class PlanVisualizer {
 
     // Visualisation d'un plan avec animation
-    public static void visualizePlan(Map<Variable, Object> initState, List<Action> plan, int numBlocks, String title) {
-        int actualNumBlocks = getActualNumBlocks(initState, numBlocks);
+    public static void visualizePlan(Map<Variable, Object> initState, List<Action> plan, String title) {
+        int actualNumBlocks = getActualNumBlocks(initState, Constants.numBlocks);
 
         // Initialisation de l'interface graphique
         BWIntegerGUI gui = new BWIntegerGUI(actualNumBlocks);

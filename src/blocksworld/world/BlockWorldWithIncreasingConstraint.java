@@ -1,5 +1,7 @@
 package blocksworld.world;
 import java.util.*;
+
+import blocksworld.Constants;
 import modelling.*;
 
 
@@ -29,6 +31,10 @@ public class BlockWorldWithIncreasingConstraint extends BlockWorldWithConstraint
             Constraint growthConstraint = new UnaryConstraint(blockOnI, validDomain);
             increasingConstraints.add(growthConstraint);
         }
+    }
+
+    public BlockWorldWithIncreasingConstraint(){
+        this(Constants.numBlocks,Constants.numStacks);
     }
 
     public Set<Constraint> getIncreasingConstraints() {

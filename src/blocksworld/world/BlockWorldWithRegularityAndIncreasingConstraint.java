@@ -1,9 +1,7 @@
 package blocksworld.world;
 import modelling.*;
 import java.util.*;
-
-
-
+import blocksworld.Constants;
 /**
  *  classe representant un monde avec des contraintes de régularité et de croissance
  */
@@ -30,6 +28,11 @@ public class BlockWorldWithRegularityAndIncreasingConstraint extends BlockWorldW
             increasingConstraints.add(growthConstraint);
         }
     }
+
+    public BlockWorldWithRegularityAndIncreasingConstraint(){
+        this(Constants.numBlocks,Constants.numStacks);
+    }
+
 
     public Set<Constraint> getIncreasingConstraints() {
         return this.increasingConstraints;

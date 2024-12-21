@@ -1,5 +1,6 @@
 package blocksworld.world;
 import java.util.*;
+import blocksworld.Constants;
 import modelling.*;
 
 
@@ -67,11 +68,12 @@ public class BlockWorldWithRegularityConstraint extends BlockWorldWithConstraint
                 }
             }
         }
-
-
-
-
     }
+
+    public BlockWorldWithRegularityConstraint(){
+        this(Constants.numBlocks,Constants.numStacks);
+    }
+
 
 
     /**

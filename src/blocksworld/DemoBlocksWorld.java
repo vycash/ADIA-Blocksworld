@@ -10,10 +10,7 @@ public class DemoBlocksWorld {
 
     public static void main(String[] args) {
 
-        int numBlocks = 6;
-        int numStacks = 8;
-
-        BlockWorldWithIncreasingConstraint w = new BlockWorldWithIncreasingConstraint(numBlocks, numStacks);
+        BlockWorldWithIncreasingConstraint w = new BlockWorldWithIncreasingConstraint();
         List<List<Integer>> blocks = new ArrayList<List<Integer>>();
         blocks.add(List.of(1,2,3));
         blocks.add(List.of(5,4));
@@ -21,7 +18,7 @@ public class DemoBlocksWorld {
         StateVisualizer.afficheState(state);
         System.out.println("est ce que l'etat est croissant? "+w.isIncreasingSatisfiedByState(state));
 
-        BlockWorldWithConstraints w4 = new BlockWorldWithConstraints(numBlocks, numStacks);
+        BlockWorldWithConstraints w4 = new BlockWorldWithConstraints();
         blocks = new ArrayList<List<Integer>>();
         blocks.add(List.of(2,2));
         blocks.add(List.of(4,5));
@@ -37,7 +34,7 @@ public class DemoBlocksWorld {
         System.out.println("est ce que l'etat est croissant? "+w.isIncreasingSatisfiedByState(state));
 
 
-        BlockWorldWithRegularityConstraint w2 = new BlockWorldWithRegularityConstraint(numBlocks, numStacks);
+        BlockWorldWithRegularityConstraint w2 = new BlockWorldWithRegularityConstraint();
         blocks = new ArrayList<List<Integer>>();
         blocks.add(List.of(1,2,3));
         blocks.add(List.of(4,5));
@@ -54,7 +51,7 @@ public class DemoBlocksWorld {
         System.out.println("est ce que l'etat est Regulier? "+w2.isRegularitySatisfiedByState(state));
 
 
-        BlockWorldWithRegularityAndIncreasingConstraint w3 = new BlockWorldWithRegularityAndIncreasingConstraint(numBlocks, numStacks);
+        BlockWorldWithRegularityAndIncreasingConstraint w3 = new BlockWorldWithRegularityAndIncreasingConstraint();
         blocks = new ArrayList<List<Integer>>();
         blocks.add(List.of(1,2,3));
         blocks.add(List.of(5,4));
@@ -78,7 +75,7 @@ public class DemoBlocksWorld {
 
 
 
-        BlockWorld world = new BlockWorld(numBlocks, numStacks);
+        BlockWorld world = new BlockWorld();
         
         // Définition de l'état initial et de l'état goal avec des configurations spécifiques
         Map<Variable, Object> initialState = world.createRandomState();
@@ -112,15 +109,14 @@ public class DemoBlocksWorld {
         if (plan != null && !plan.isEmpty()) {
             System.out.println("Plan : " + plan);
             StateVisualizer.afficheState(ActionGenerator.executePlan(initialState, plan));
-            PlanVisualizer.visualizePlan(initialState, plan, numBlocks, "Simulation du Plan A*");
+            PlanVisualizer.visualizePlan(initialState, plan, "Simulation du Plan A*");
             System.out.println("======= nombre d'états visités : " + planner.getNodeCount());
             System.out.println("======= Temps de calcul du plan (A*): " + durationInMilliseconds + "ms qui est a peu près "+durationInSeconds+"s");
         } else {
             System.out.println("Aucun plan trouvé.");
         }
 
-        
-/*
+    
         System.out.println("============== BFS en cours de recherche");
         planner = new BFSPlanner(initialState, generator.generateAllActions(), goal);
         planner.activateNodeCount(true);
@@ -133,7 +129,7 @@ public class DemoBlocksWorld {
         if (plan != null && !plan.isEmpty()) {
             System.out.println("Plan : " + plan);
             StateVisualizer.afficheState(ActionGenerator.executePlan(initialState,plan));
-            PlanVisualizer.visualizePlan(initialState, plan, numBlocks, "Simulation du Plan BFS");
+            PlanVisualizer.visualizePlan(initialState, plan, "Simulation du Plan BFS");
             System.out.println("======= nombre d'états visités : "+planner.getNodeCount());
             System.out.println("======= Temps de calcul du plan (BFS): " + durationInMilliseconds + "ms qui est a peu près "+durationInSeconds+"s");
 
@@ -153,7 +149,7 @@ public class DemoBlocksWorld {
         if (plan != null && !plan.isEmpty()) {
             System.out.println("Plan : " + plan);
             StateVisualizer.afficheState(ActionGenerator.executePlan(initialState,plan));
-            PlanVisualizer.visualizePlan(initialState, plan, numBlocks, "Simulation du Plan DFS");
+            PlanVisualizer.visualizePlan(initialState, plan, "Simulation du Plan DFS");
             System.out.println("======= nombre d'états visités : "+planner.getNodeCount());
             System.out.println("======= Temps de calcul du plan (DFS): " + durationInMilliseconds + "ms qui est a peu près "+durationInSeconds+"s");
 
@@ -174,7 +170,7 @@ public class DemoBlocksWorld {
         if (plan != null && !plan.isEmpty()) {
             System.out.println("Plan : " + plan);
             StateVisualizer.afficheState(ActionGenerator.executePlan(initialState,plan));
-            PlanVisualizer.visualizePlan(initialState, plan, numBlocks, "Simulation du Plan Dijkstra");
+            PlanVisualizer.visualizePlan(initialState, plan, "Simulation du Plan Dijkstra");
             System.out.println("======= nombre d'états visités : "+planner.getNodeCount());
             System.out.println("======= Temps de calcul du plan (Dijkstra): " + durationInMilliseconds + "ms qui est a peu près "+durationInSeconds+"s");
 
@@ -182,7 +178,7 @@ public class DemoBlocksWorld {
             System.out.println("Aucun plan trouvé.");
         }
         
-        */
+        
     }
 }
 

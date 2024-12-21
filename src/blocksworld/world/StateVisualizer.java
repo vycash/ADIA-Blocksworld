@@ -4,6 +4,7 @@ import bwmodel.*;
 import bwui.*;
 import javax.swing.JFrame;
 import modelling.Variable;
+import blocksworld.Constants;
 
 
 /*
@@ -35,7 +36,7 @@ public class StateVisualizer {
         System.out.println("-------------------------");
     
         // Construire l'affichage pour chaque pile
-        for (int pileId = -1; pileId >= -BlockWorld.numStacks ; pileId--) {
+        for (int pileId = -1; pileId >= -Constants.numStacks ; pileId--) {
             StringBuilder sb = new StringBuilder();
             sb.append("Pile ").append(pileId).append(" : ");
     

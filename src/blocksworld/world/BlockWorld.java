@@ -2,6 +2,7 @@ package blocksworld.world;
 import java.util.*;
 import modelling.Variable;
 import modelling.BooleanVariable;
+import blocksworld.Constants;
 
 /**
  * Cette classe représente un monde de blocs.
@@ -12,7 +13,7 @@ public class BlockWorld {
     protected Map<Integer, Variable> onB;
     protected Map<Integer, BooleanVariable> fixedB;
     protected Map<Integer, BooleanVariable> freeP;
-    protected static int numBlocks, numStacks;
+    protected int numBlocks, numStacks;
     protected Set<Object> domain;
 
     /**
@@ -48,6 +49,10 @@ public class BlockWorld {
             this.freeP.put(k, new BooleanVariable("free" + k));
             k--;
         }
+    }
+
+    public BlockWorld(){
+        this(Constants.numBlocks,Constants.numStacks);
     }
 
     public Set<Object> domain(){

@@ -62,22 +62,4 @@ public class DemoDataMining {
     }
 
 
-
-    //méthode pour générer des états aléatoires
-    private static List<List<Integer>> generateRandomState(Random random, int numBlocks, int numPiles) {
-        List<List<Integer>> state = new ArrayList<>();
-        for (int i = 0; i < numPiles; i++) {
-            state.add(new ArrayList<>());
-        }
-
-        // répartition aléatoire des blocs sur les piles
-        for (int b = 0; b < numBlocks; b++) {
-            int pileIndex = random.nextInt(numPiles);
-            state.get(pileIndex).add(b);
-        }
-
-        return state;
-    }
-
-
 }

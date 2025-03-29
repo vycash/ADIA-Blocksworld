@@ -20,8 +20,6 @@ Le projet explore et met en œuvre différents aspects fondamentaux de l'intelli
    - Les configurations et plans générés peuvent être visualisés graphiquement grâce à des bibliothèques tierces.
 
 ## l'arborescence du rendu est comme suit:
-.
-├── information.txt  
 ├── lib/  
 ├── MainScript.sh  
 ├── README.md  

@@ -1,8 +1,5 @@
-#############################################
-#                BLOCKSWORLD                #
-#############################################
+# Aide à décision intélligence artificielle BLOCKSWORLD                
 
- 
 ## Description 
 Ce projet est une implémentation du monde des blocs (BlocksWorld) qui s'agit d'empiler des blocs les uns sur les autres en piles, un environnement classique utilisé en intelligence artificielle pour expérimenter des algorithmes de planification, de satisfaction de contraintes et d’extraction de connaissances. Réalisé dans le cadre du cours "Aide à la Décision et Intelligence Artificielle" à l'Université de Caen Normandie.
 
@@ -24,40 +21,40 @@ Le projet explore et met en œuvre différents aspects fondamentaux de l'intelli
 
 ## l'arborescence du rendu est comme suit:
 .
-├── information.txt
-├── lib/
-├── MainScript.sh
-├── README.md
-├── run_blocksworld.sh
-├── src
-│   ├── blocksworld
-│   │   ├── csp
-│   │   │   ├── DemoConstraint.java
-│   │   │   ├── DemoCSP.java
-│   │   │   ├── DemoIncreasingConstraint.java
-│   │   │   ├── DemoRegularityAndIncreasingConstraint.java
-│   │   │   └── DemoRegularityConstraint.java
-│   │   ├── datamining
-│   │   │   ├── BooleanVariableGenerator.java
-│   │   │   └── DemoDataMining.java
-│   │   ├── DemoBlocksWorld.java
-│   │   ├── planners
-│   │   │   ├── ActionGenerator.java
-│   │   │   ├── BadBlockHeuristic.java
-│   │   │   ├── BadStackHeuristic.java
-│   │   │   └── PlanVisualizer.java
-│   │   └── world
-│   │       ├── BlockWorld.java
-│   │       ├── BlockWorldWithConstraints.java
-│   │       ├── BlockWorldWithIncreasingConstraint.java
-│   │       ├── BlockWorldWithRegularityAndIncreasingConstraint.java
-│   │       ├── BlockWorldWithRegularityConstraint.java
-│   │       └── StateVisualizer.java
-│   ├── cp/
-│   ├── datamining/
-│   ├── modelling/
-│   └── planning/
-└── test/
+├── information.txt  
+├── lib/  
+├── MainScript.sh  
+├── README.md  
+├── run_blocksworld.sh  
+├── src  
+│   ├── blocksworld  
+│   │   ├── csp  
+│   │   │   ├── DemoConstraint.java  
+│   │   │   ├── DemoCSP.java  
+│   │   │   ├── DemoIncreasingConstraint.java  
+│   │   │   ├── DemoRegularityAndIncreasingConstraint.java  
+│   │   │   └── DemoRegularityConstraint.java  
+│   │   ├── datamining  
+│   │   │   ├── BooleanVariableGenerator.java  
+│   │   │   └── DemoDataMining.java  
+│   │   ├── DemoBlocksWorld.java  
+│   │   ├── planners  
+│   │   │   ├── ActionGenerator.java  
+│   │   │   ├── BadBlockHeuristic.java  
+│   │   │   ├── BadStackHeuristic.java  
+│   │   │   └── PlanVisualizer.java  
+│   │   └── world  
+│   │       ├── BlockWorld.java  
+│   │       ├── BlockWorldWithConstraints.java  
+│   │       ├── BlockWorldWithIncreasingConstraint.java  
+│   │       ├── BlockWorldWithRegularityAndIncreasingConstraint.java  
+│   │       ├── BlockWorldWithRegularityConstraint.java  
+│   │       └── StateVisualizer.java  
+│   ├── cp/    
+│   ├── datamining/  
+│   ├── modelling/  
+│   └── planning/  
+└── test/  
 
     
 ## Structure :
@@ -75,10 +72,19 @@ Le projet explore et met en œuvre différents aspects fondamentaux de l'intelli
 - lib/ : répértoire contenant toutes les librairies utiles et utilisées par l'ensenmble des classes
 
 
-### pour executer les classes de tests et démo des packages standard executez le script disponible à la racine ** ./MainScript.sh **
-### pour executer les Démo du package blocksworld le script disponible à la racine ** ./run_blocksworld **
-
+### pour executer les classes de tests et démo des packages standard executez le script disponible à la racine 
+``` bash
+./MainScript.sh
+```
+ 
+### pour executer les Démo du package blocksworld le script disponible à la racine 
+``` bash
+./run_blocksworld.sh
+```
+ 
 ### pour executer GUIDemo, placez vous dans lib/ et executez : ** java -cp blocksworld.jar bwdemo.GUIDemo **
-
+``` bash
+./java -cp blocksworld.jar bwdemo.GUIDemo
+```
 
 

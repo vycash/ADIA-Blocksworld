@@ -12,8 +12,10 @@ public class DemoBlocksWorld {
 
         BlockWorldWithIncreasingConstraint w = new BlockWorldWithIncreasingConstraint();
         List<List<Integer>> blocks = new ArrayList<List<Integer>>();
+        // définiton des empilements des blocks en piles:
         blocks.add(List.of(1,2,3));
         blocks.add(List.of(5,4));
+        // dans l'exemple ci-dessus on a précisé les empilements sur les piles 1 et 2
         Map<Variable, Object> state = w.createState(blocks);
         StateVisualizer.afficheState(state);
         System.out.println("est ce que l'etat est croissant? "+w.isIncreasingSatisfiedByState(state));
